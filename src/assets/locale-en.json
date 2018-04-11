@@ -1,0 +1,22 @@
+{
+  "common_activate_button": "Activate",
+  "common_active_button": "Active",
+  "common_archive_button": "Archive",
+  "common_button_change": "Change",
+  "common_button_search": "Search",
+  "common_copy_button": "Copy",
+  "common_download_button": "Download",
+  "common_error_access_denied": "Sorry, you do not have the proper access to view this content.",
+  "common_error_invalid_email": "Please enter a valid email address.",
+  "common_error_max_length": "The maximum number of characters allowed is %{length}.",
+  "common_error_min_length": "Please enter at least %{length} characters.",
+  "common_error_not_authorized": "Sorry, you are not an authorized user. Try a different email and password.",
+  "common_error_page_not_found": "404: Oops, we can't find that page!",
+  "common_error_required": "This field is required!",
+  "common_error_required_pattern": "The required pattern is: %{pattern}",
+  "common_error_role_not_authorized": "You are not authorized to view this page.",
+  "common_error_server_down": "Sorry, the Core Strengths server is temporarily unavailable. Please try again later.",
+  "common_error_unknown": "Sorry, we have encountered an unknown error. Please try again later.",
+  "common_learn_more_button": "Learn More",
+  "common_next_button": "Next"
+}

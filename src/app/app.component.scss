@@ -1,0 +1,10 @@
+@import './../mixins';
+@import './../variables';
+
+.app-component {
+  // TODO: place all markup for the component in this class
+  .example {
+    color: $psp-green;
+    font-family: "proxima_novabold", Arial, sans-serif;
+  }
+}

@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'proxima_novamedium';
+  src: url('./assets/fonts/proximanova-medium.otf') format('otf'),
+       url('./assets/fonts/proximanova-medium-webfont.woff2') format('woff2'),
+       url('./assets/fonts/proximanova-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_novaregular';
+  src: url('./assets/fonts/proximanova-regular.otf') format('otf'),
+       url('./assets/fonts/proximanova-regular-webfont.woff2') format('woff2'),
+       url('./assets/fonts/proximanova-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'proxima_novasemibold';
+  src: url('./assets/fonts/proximanova-semibold.otf') format('otf'),
+       url('./assets/fonts/proximanova-semibold-webfont.woff2') format('woff2'),
+       url('./assets/fonts/proximanova-semibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_novabold';
+  src: url('./assets/fonts/proximanova-bold.otf') format('otf'),
+       url('./assets/fonts/proximanova-bold-webfont.woff2') format('woff2'),
+       url('./assets/fonts/proximanova-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'caveat-regular';
+  src: url('./assets/fonts/caveat-regular-webfont.eot'),
+       url('./assets/fonts/caveat-regular-webfont.woff') format('woff'),
+       url('./assets/fonts/caveat-regular-webfont.ttf') format('truetype'),
+       url('./assets/fonts/caveat-regular-webfont.svg#caveatbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'oswald-regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./assets/fonts/oswald-regular.woff') format('woff'),
+       url('./assets/fonts/oswald-regular.woff2') format('woff2'),
+       url('./assets/fonts/oswald-regular.ttf') format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'oswald-bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/fonts/oswald-bold.woff') format('woff'),
+       url('./assets/fonts/oswald-bold.woff2') format('woff2'),
+       url('./assets/fonts/oswald-bold.ttf') format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'oswald-medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./assets/fonts/oswald-medium.woff') format('woff'),
+       url('./assets/fonts/oswald-medium.woff2') format('woff2'),
+       url('./assets/fonts/oswald-medium.ttf') format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}

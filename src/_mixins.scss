@@ -1,0 +1,178 @@
+/*
+ * Border radius
+ */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+/*
+ * Convert Pixels to EM
+ */
+$browser-context: 14;
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}
+
+/*
+ * Create a button with the specified property settings
+ */
+@mixin app-button($width, $height, $font-size, $border-radius, $bg-color: $black) {
+  @if (unitless($width)) {
+    $width: $width * 1px;
+  }
+
+  @if (unitless($height)) {
+    $height: $height * 1px;
+  }
+
+  @if (unitless($font-size)) {
+    $font-size: $font-size * 1px;
+  }
+
+  @if (unitless($border-radius)) {
+    $border-radius: $border-radius * 1px;
+  }
+
+  cursor: pointer;
+  width: $width;
+  height: $height;
+  background-color: $bg-color;
+  color: $white;
+  font-size: $font-size;
+  font-family: "proxima_novamedium", Arial, sans-serif;
+  @include border-radius($border-radius);
+
+  &:disabled {
+    background-color: $disabled-button;
+  }
+}
+
+/*
+ * Create a styled checkbox that looks more like a radio button
+ */
+@mixin app-checkbox($checked-bg-color, $border-color) {
+  position: relative;
+  $size: 22px;
+
+  label {
+    background-color: $white;
+    border: 1px solid $border-color;
+    border-radius: 25%;
+    cursor: pointer;
+    height: $size;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: $size;
+    margin-bottom: 0;
+
+    &:after {
+      border: 2px solid $white;
+      border-top: none;
+      border-right: none;
+      content: "";
+      height: 6px;
+      left: 4px;
+      opacity: 0;
+      position: absolute;
+      top: 6px;
+      transform: rotate(-45deg);
+      width: 12px;
+    }
+  }
+
+  input[type='checkbox'], input[type='radio'] {
+    visibility: hidden;
+    height: $size;
+    width: $size;
+
+    &:checked + label {
+      background-color: $checked-bg-color;
+      border-color: $border-color;
+    }
+
+    &:checked + label:after {
+      opacity: 1;
+    }
+  }
+}
+
+/**
+ * Styles foreground text or other content with the appropriate PSP personality colors
+ */
+@mixin pspPersonalityColors() {
+  &.red,
+  &.u {
+    color: $psp-red;
+  }
+
+  &.blue,
+  &.h {
+    color: $psp-blue;
+  }
+
+  &.green,
+  &.b {
+    color: $psp-green;
+  }
+
+  &.hub {
+    color: $psp-hub;
+  }
+}
+
+/**
+ * Styles backrounds with the appropriate PSP personality colors
+ */
+@mixin pspBackgroundPersonalityColors() {
+  &.red,
+  &.u {
+    background-color: $psp-red;
+  }
+
+  &.blue,
+  &.h {
+    background-color: $psp-blue;
+  }
+
+  &.green,
+  &.b {
+    background-color: $psp-green;
+  }
+
+  &.hub {
+    background-color: $psp-hub;
+  }
+}
+
+@mixin pspPersonalityBarColors($image-directory-path) {
+  &.red-green,
+  &.red-blue,
+  &.blue-green {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  &.red-green {
+    background-image: url('#{$image-directory-path}red-green_bar.svg');
+  }
+
+  &.red-blue {
+    background-image: url('#{$image-directory-path}red-blue_bar.svg');
+  }
+
+  &.blue-green {
+    background-image: url('#{$image-directory-path}blue-green_bar.svg');
+  }
+}

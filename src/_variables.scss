@@ -1,0 +1,65 @@
+$base-side-padding: 20px;
+$base-top-bottom-spacing: 25px;
+$base-font-size: 14px;
+$base-line-height: 18px;
+$max-body-width: 1080px;
+$top-row-padding: 10px;
+
+$psp-red: #ED174C;
+$psp-blue: #00B3F0;
+$psp-green: #00AC6C;
+$psp-hub: #2C393E;
+
+$white: #FFFFFF;
+$almost-white: #F9F9F9;
+$extra-light-gray: #EEEEEE;
+$very-light-gray: #E5E5E5;
+$light-gray: #C2C2C2;
+$medium-light-gray: #AFAFAF;
+$medium-gray: #9B9B9B;
+$dark-gray: #838384;
+$very-dark-gray: #474747;
+$extra-dark-gray: #333333;
+$border-gray: #D6D6D6;
+$black: #000000;
+$light-blue: #2AB0E0;
+$medium-blue: #308BC5;
+$hot-pink: #FC3768;
+$lime-green: #B8E986;
+$medium-green: #01AC6C;
+$medium-dark-red: #EB254D;
+
+$body-content-background-color: #F7F7F7;
+$body-box-shadow-width: 7px;
+$body-box-negative-shadow-width: -$body-box-shadow-width;
+$body-text-color: #4A4A4A;
+$body-height: 100vh;
+$header-height: 72px;
+$footer-height: 76px;
+
+$portrait-explorer-width: 755px;
+$small-card-width: 120px;
+$small-card-height: 57px;
+$small-card-border: 2px;
+$small-card-full-width: 120px + 2 * $small-card-border;
+$small-card-full-height: 57px + 2 * $small-card-border;
+$key-card-width: 92px;
+$key-card-height: 45px;
+
+/* Values pulled from the designs are above.
+ * Values that were "guessed" are below
+ */
+$disabled-button: #D3D3D3;
+
+$alert-success-text-color: #FFFFFF;
+$alert-success-background-color: #05cea1;
+$alert-success-border-color: unset;
+$alert-info-text-color: #ffffff;
+$alert-info-background-color: #308bc5;
+$alert-info-border-color: unset;
+$alert-warning-text-color: #856404;
+$alert-warning-background-color: #fff3cd;
+$alert-warning-border-color: #ffeeba;
+$alert-error-text-color: #ffffff;
+$alert-error-background-color: #d0021b;
+$alert-error-border-color: unset;
