@@ -1,7 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
+import { AppRoutingModule } from './app-routing.module';
+
+import { AuthGuard } from './shared/guards/auth.guard';
+
+import { HttpIntercepterService, HttpService, UserService } from './shared/services';
+import { SimpleNotificationsModule, NotificationsService } from 'angular2-notifications';
 
 // Pages/Components
 import { AppComponent } from './app.component';
@@ -44,9 +51,22 @@ const l10nConfig: L10nConfig = {
     BrowserAnimationsModule,
     HttpClientModule,
     LocalizationModule.forRoot(l10nConfig),
-    LocaleValidationModule.forRoot()
+    LocaleValidationModule.forRoot(),
+    SimpleNotificationsModule.forRoot(),
+
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpIntercepterService,
+      multi: true
+    },
+    HttpService,
+    NotificationsService,
+    AuthGuard,
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

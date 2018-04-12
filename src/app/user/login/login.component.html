@@ -1,0 +1,36 @@
+<div class="login-page">
+  <mat-card>
+    <form class="sign-in-form" name="loginForm" [formGroup]="loginForm" novalidate>
+      <div class="form-group">
+        <label class="label-control">Email</label>
+        <input class="form-control" formControlName="email">
+        <div class="form-field-error" *ngIf="loginFormErrors.email.required">
+          Email is required
+        </div>
+        <div class="form-field-error" *ngIf="!loginFormErrors.email.required && loginFormErrors.email.email">
+          Please enter a valid email address
+        </div>
+      </div>
+
+      <div class="form-group password-form-field">
+        <label class="label-control">Password</label>
+        <input class="form-control" type="password" formControlName="password">
+        <div class="form-field-error" *ngIf="loginFormErrors.password.required">
+          Password is required
+        </div>
+      </div>
+
+      <div class="login-error-message">
+        <div *ngIf="loginErrorMessage">
+          {{ loginErrorMessage }}
+        </div>
+      </div>
+
+      <div class="action">
+        <button mat-raised-button class="btn btn-primary" [disabled]="loginForm.invalid" (click)="login()">
+          Sign In
+        </button>
+      </div>
+    </form>
+  </mat-card>
+</div>

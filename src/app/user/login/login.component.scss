@@ -1,0 +1,43 @@
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  .sign-in-form {
+    width: 400px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .form-group {
+      height: 80px;
+
+      input {
+        &.ng-invalid {
+          border-color: #f44336;
+        }
+      }
+
+      .form-field-error {
+        color: #f44336;
+        font-size: 10px;
+        margin: 2px;
+      }
+    }
+
+    .login-error-message {
+      height: 30px;
+      color: #f44336;
+      text-align: center;
+    }
+
+    .action {
+      button {
+        width: 100%;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

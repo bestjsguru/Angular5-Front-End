@@ -80,7 +80,7 @@ button {
   padding: 0;
   min-height: calc(1024px - #{$header-height} - #{$footer-height} - #{$base-top-bottom-spacing});
   height: calc(100% - 76px);
-  max-width: $max-body-width;
+  // max-width: $max-body-width;
   position: relative;
 }
 
