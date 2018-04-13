@@ -5,12 +5,14 @@ import { SharedModule } from '../shared/shared.module';
 
 import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
+import { HeaderModule } from './header/header.module';
 
 @NgModule({
   imports: [
     CommonModule,
     PagesRoutingModule,
-    SharedModule
+    SharedModule,
+    HeaderModule
   ],
   declarations: [PagesComponent]
 })

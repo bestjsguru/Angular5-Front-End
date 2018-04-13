@@ -4,8 +4,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { PagesComponent } from './pages.component';
 
 const routes: Routes = [
-  { path: '', component: PagesComponent, pathMatch: 'full' },
-  { path: '**', redirectTo: '' }
+  { 
+    path: '',
+    component: PagesComponent,
+    children: [
+      { path: 'summaries', loadChildren: './summaries/summaries.module#SummariesModule' },
+      { path: '', redirectTo: 'summaries' },
+      { path: '**', redirectTo: 'summaries' },
+    ]
+  }
 ];
 
 @NgModule({

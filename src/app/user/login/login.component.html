@@ -1,9 +1,17 @@
 <div class="login-page">
+  <div class="logo">
+    <img src="../../../assets/images/logo.png" />
+  </div>
+  
   <mat-card>
     <form class="sign-in-form" name="loginForm" [formGroup]="loginForm" novalidate>
+      <div class="header"> Login to your account</div>
+      
       <div class="form-group">
-        <label class="label-control">Email</label>
-        <input class="form-control" formControlName="email">
+        <div class="row-group">
+            <label class="label-control">Email&nbsp;Adress:</label>
+            <input class="form-control" formControlName="email">
+        </div>
         <div class="form-field-error" *ngIf="loginFormErrors.email.required">
           Email is required
         </div>
@@ -13,8 +21,10 @@
       </div>
 
       <div class="form-group password-form-field">
-        <label class="label-control">Password</label>
-        <input class="form-control" type="password" formControlName="password">
+        <div class="row-group">
+            <label class="label-control">Password:</label>
+            <input class="form-control" type="password" formControlName="password" (ngModelChange)="change($event)">
+        </div>
         <div class="form-field-error" *ngIf="loginFormErrors.password.required">
           Password is required
         </div>
@@ -27,10 +37,17 @@
       </div>
 
       <div class="action">
-        <button mat-raised-button class="btn btn-primary" [disabled]="loginForm.invalid" (click)="login()">
-          Sign In
+        <button mat-raised-button class="btn login" [disabled]="loginForm.invalid" (click)="login()">
+          Login
+        </button>
+        <button mat-raised-button class="btn register" [disabled]="loginForm.invalid">
+          Register
         </button>
       </div>
     </form>
   </mat-card>
+
+  <div class="footer">
+      VitalChain © 2016 SimplyVital Health, Inc. All Rights Reserved.
+  </div>
 </div>

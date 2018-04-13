@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../../shared/services';
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,8 +12,10 @@ export class LoginComponent implements OnInit {
   loginFormErrors: any;
   loginErrorMessage: string;
 
+  isLoading = false;
+
   constructor(
-    private useService: UserService,
+    private userService: UserService,
     private formBuilder: FormBuilder,
     private router: Router
   ) { }
@@ -53,11 +54,34 @@ export class LoginComponent implements OnInit {
   login() {
     const email = this.loginForm.get('email').value;
     const password = this.loginForm.get('password').value;
+
     if (email === 'someone@example.com' && password === 'password') {
-      this.useService.signedIn = true;
+      this.userService.signedIn = true;
       this.router.navigate(['pages']);
     } else {
       this.loginErrorMessage = 'Wrong password or email';
+    }
+  }
+
+  // async login() {
+
+  //   try {
+  //     const email = this.loginForm.get('email').value;
+  //     const password = this.loginForm.get('password').value;
+  //     this.isLoading = true;
+  //     const res = await this.userService.login(email, password).toPromise();
+      
+  //     console.log(res);
+  //   } catch (e) {
+  //     console.log(e);
+  //   } finally {
+  //     this.isLoading = false;
+  //   }
+  // }
+
+  change(e) {
+    if (!e) {
+      this.loginErrorMessage = '';
     }
   }
 }
