@@ -70,7 +70,6 @@ export class LoginComponent implements OnInit {
   //     const password = this.loginForm.get('password').value;
   //     this.isLoading = true;
   //     const res = await this.userService.login(email, password).toPromise();
-      
   //     console.log(res);
   //   } catch (e) {
   //     console.log(e);
@@ -79,7 +78,7 @@ export class LoginComponent implements OnInit {
   //   }
   // }
 
-  change(e) {
+  change(e: string) {
     if (!e) {
       this.loginErrorMessage = '';
     }

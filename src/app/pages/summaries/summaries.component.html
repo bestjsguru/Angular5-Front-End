@@ -9,6 +9,13 @@
           <option value="item">Episode List Name1</option>
           <option value="item">Episode List Name2</option>
         </select>
+        <!-- <mat-form-field>
+          <mat-select placeholder="Favorite food">
+            <mat-option *ngFor="let food of foods" [value]="food.value">
+              {{ food.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field> -->
       </div>
       <div class="add-btn">
         <i class="fa fa-plus-circle"></i>
@@ -17,12 +24,8 @@
     </div>
     <div class="list-header">
       <div class="risk">risk</div>
-      <div class="patient-name">
-        <select>
-          <option vaule="name1">Patient name</option>
-        </select>
-      </div>
-      <div class="account-no">Account NO</div>
+      <div class="patient-name">Patient name</div>
+      <div class="account-no">Account NO.</div>
       <div class="episode-type">episode type</div>
       <div class="visited-date">last visit</div>
       <div class="last-procedure">last procedure</div>
@@ -35,3 +38,56 @@
 
   </div>
 </div>
+
+<div class="example-container mat-elevation-z8">
+    <mat-table #table [dataSource]="dataSource" matSort>
+
+      <ng-container matColumnDef="risk">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> RISK. </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.risk}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> NAME </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="no_account">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> ACCOUNT NO. </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.no_account}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="episode_type">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> EPISODE TYPE </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.episode_type}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="last_visit">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> LAST VISIT </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.last_visit}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="last_precedure">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> LAST PRECEDURE </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.last_precedure}} </mat-cell>
+      </ng-container>
+    
+      <ng-container matColumnDef="last_location">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> LAST LOCATION </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.last_location}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="last_status">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> LAST STATUS </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.last_status}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="ccd_status">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> CCD STATUS </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.ccd_status}} </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
