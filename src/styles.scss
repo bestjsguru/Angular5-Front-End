@@ -76,7 +76,7 @@ button {
 }
 
 .body-content {
-  background: none repeat scroll 0 0 $white;
+  background: none repeat scroll 0 0 #f5f6fa;
   padding: 0;
   min-height: calc(1024px - #{$header-height} - #{$footer-height} - #{$base-top-bottom-spacing});
   height: calc(100% - 76px);
@@ -281,3 +281,126 @@ span.right-tab {
     box-shadow: none;
   }
 }
+
+/********************************************/
+/* Material Table Overrides         */
+/********************************************/
+
+mat-table {
+  mat-header-row {
+    height: 70px;
+    padding: 0;
+
+    mat-header-cell  {
+      flex: none !important;
+      width: 100px;
+
+      &.mat-column- {
+        &risk{
+          width: 65px;
+        }
+
+        &name{
+          width: 189px;
+        }
+
+        &no_account{
+          width: 130px;
+        }
+
+        &episode_type{
+          width: 240px;
+        }
+
+        &last_visit{
+          width: 160px;
+        }
+
+        &last_precedure{
+          width: 240px;
+        }
+
+        &last_location{
+          width: 200px;
+        }
+
+        &last_status{
+          width: 200px;
+        }
+      }
+
+      span {
+        display: none !important;
+      }
+    }
+  }
+
+  mat-row {
+    &:hover {
+      box-shadow: 0 2px 15px 3px #E0E0E3
+    }
+
+    mat-cell {
+      display: flex;
+      color: #141928;
+      align-items: center;
+      height: 100%;
+      flex: none !important;
+      padding: 0 19px;
+      border-left: 2px solid #F0F0F1;
+
+      &.risk {
+        width: 20px;
+        height: 20px;
+        border-radius: 2px;
+        margin-right: 20px;
+        padding: 0;
+        border: none;
+  
+        &.level3 {
+          background-color:#22D700;
+        }
+  
+        &.level2 {
+          background-color:#FFB300;
+        }
+  
+        &.level1 {
+          background-color:#FF3264;
+        }
+      }
+  
+      &.mat-column- {
+
+        &name{
+          width: 189px;
+        }
+  
+        &no_account{
+          width: 130px;
+        }
+  
+        &episode_type{
+          width: 240px;
+        }
+  
+        &last_visit{
+          width: 160px;
+        }
+  
+        &last_precedure{
+          width: 240px;
+        }
+  
+        &last_location{
+          width: 200px;
+        }
+  
+        &last_status{
+          width: 200px;
+        }
+      }
+    }
+  }
+}
+

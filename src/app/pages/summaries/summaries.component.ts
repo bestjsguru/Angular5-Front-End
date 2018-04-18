@@ -28,6 +28,10 @@ export class SummariesComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
   }
+
+  rowClicked(row: Element) {
+    console.log(row);
+  }
 }
 
 export interface Element {
@@ -43,8 +47,14 @@ export interface Element {
 }
 
 const ELEMENT_DATA: Element[] = [
-  { risk: 1, name: 'Hey', no_account: 1, episode_type: 'A', last_visit: new Date('December 25, 1995'), last_precedure: 'ABC',
-      last_location: 'Lis', last_status: 'Ok', ccd_status: 'A' },
-  {risk: 2, name: 'Hey', no_account: 1, episode_type: 'A', last_visit: new Date('December 25, 1895'), last_precedure: 'ABC',
-      last_location: 'Lis', last_status: 'Ok', ccd_status: 'A'}
+  {risk: 1, name: 'Juan', no_account: 1011, episode_type: 'Total Hip', last_visit: new Date('April 3, 2016'), last_precedure: 'Elective',
+      last_location: 'Acadamic Physician Group', last_status: 'CarePathWay', ccd_status: 'Missing' },
+  {risk: 2, name: 'Hey', no_account: 1102, episode_type: 'A', last_visit: new Date('December 25, 1895'), last_precedure: 'ABC',
+      last_location: 'Lis', last_status: 'Ok', ccd_status: 'AB'},
+  {risk: 3, name: 'Hesol', no_account: 1103, episode_type: 'AT', last_visit: new Date('December 25, 1895'), last_precedure: 'ABC',
+      last_location: 'Par', last_status: 'Bad', ccd_status: 'ABC'},
+  {risk: 3, name: 'Hesol', no_account: 1104, episode_type: 'AT', last_visit: new Date('December 25, 1895'), last_precedure: 'ABC',
+      last_location: 'Par', last_status: 'Bad', ccd_status: 'ABC'},
+  {risk: 3, name: 'Hesol', no_account: 1104, episode_type: 'AT', last_visit: new Date('December 25, 1895'), last_precedure: 'ABC',
+      last_location: 'Par', last_status: 'Bad', ccd_status: 'ABC'},
 ];

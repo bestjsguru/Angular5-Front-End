@@ -22,72 +22,59 @@
         <div>New Episode</div>
       </div>
     </div>
-    <div class="list-header">
-      <div class="risk">risk</div>
-      <div class="patient-name">Patient name</div>
-      <div class="account-no">Account NO.</div>
-      <div class="episode-type">episode type</div>
-      <div class="visited-date">last visit</div>
-      <div class="last-procedure">last procedure</div>
-      <div class="last-location">last location</div>
-      <div class="last-status">last status</div>
-      <div class="ccd-status">ccd status</div>
-    </div>
   </div>
-  <div class="list">
 
-  </div>
-</div>
-
-<div class="example-container mat-elevation-z8">
+  <div class="table-container mat-elevation-z8">
     <mat-table #table [dataSource]="dataSource" matSort>
 
-      <ng-container matColumnDef="risk">
-        <mat-header-cell *matHeaderCellDef mat-sort-header> RISK. </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.risk}} </mat-cell>
+      <ng-container matColumnDef="risk" class="risk">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> RISK </mat-header-cell>
+        <mat-cell *matCellDef="let element" [class]="'risk level' + element.risk"> &nbsp; </mat-cell>
       </ng-container>
-  
-      <ng-container matColumnDef="name">
-        <mat-header-cell *matHeaderCellDef mat-sort-header> NAME </mat-header-cell>
+
+      <ng-container matColumnDef="name" class="patient-name">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> PATIENT NAME </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
       </ng-container>
-  
-      <ng-container matColumnDef="no_account">
+
+      <ng-container matColumnDef="no_account" class="account-no">
         <mat-header-cell *matHeaderCellDef mat-sort-header> ACCOUNT NO. </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.no_account}} </mat-cell>
       </ng-container>
-  
-      <ng-container matColumnDef="episode_type">
+
+      <ng-container matColumnDef="episode_type" class="episode-type">
         <mat-header-cell *matHeaderCellDef mat-sort-header> EPISODE TYPE </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.episode_type}} </mat-cell>
       </ng-container>
 
-      <ng-container matColumnDef="last_visit">
+      <ng-container matColumnDef="last_visit" class="visited-date">
         <mat-header-cell *matHeaderCellDef mat-sort-header> LAST VISIT </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.last_visit}} </mat-cell>
+        <mat-cell *matCellDef="let element"> {{element.last_visit | date: 'mediumDate' }} </mat-cell>
       </ng-container>
 
-      <ng-container matColumnDef="last_precedure">
+      <ng-container matColumnDef="last_precedure" class="last-procedure">
         <mat-header-cell *matHeaderCellDef mat-sort-header> LAST PRECEDURE </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.last_precedure}} </mat-cell>
       </ng-container>
     
-      <ng-container matColumnDef="last_location">
+      <ng-container matColumnDef="last_location" class="last-location">
         <mat-header-cell *matHeaderCellDef mat-sort-header> LAST LOCATION </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.last_location}} </mat-cell>
       </ng-container>
 
-      <ng-container matColumnDef="last_status">
+      <ng-container matColumnDef="last_status" class="last-status">
         <mat-header-cell *matHeaderCellDef mat-sort-header> LAST STATUS </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.last_status}} </mat-cell>
       </ng-container>
 
-      <ng-container matColumnDef="ccd_status">
+      <ng-container matColumnDef="ccd_status" class="ccd-status">
         <mat-header-cell *matHeaderCellDef mat-sort-header> CCD STATUS </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.ccd_status}} </mat-cell>
       </ng-container>
-  
+
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="rowClicked(row)"></mat-row>
     </mat-table>
   </div>
+</div>
+
