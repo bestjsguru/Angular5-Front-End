@@ -47,14 +47,14 @@ export interface Element {
 }
 
 const ELEMENT_DATA: Element[] = [
-  {risk: 1, name: 'Juan', no_account: 1011, episode_type: 'Total Hip', last_visit: new Date('April 3, 2016'), last_precedure: 'Elective',
-      last_location: 'Acadamic Physician Group', last_status: 'CarePathWay', ccd_status: 'Missing' },
-  {risk: 2, name: 'Hey', no_account: 1102, episode_type: 'A', last_visit: new Date('December 25, 1895'), last_precedure: 'ABC',
+  {risk: 1, name: 'Juan Elison', no_account: 1011, episode_type: 'Total Hip Replacement', last_visit: new Date('April 3, 2016'), last_precedure: 'Elective Hip Replacement',
+      last_location: 'Acadamic Physician Group', last_status: 'Care PathWay not set-up', ccd_status: 'Missing' },
+  {risk: 2, name: 'Laurie Hoffman', no_account: 1102, episode_type: 'A', last_visit: new Date('December 25, 1895'), last_precedure: 'ABC',
       last_location: 'Lis', last_status: 'Ok', ccd_status: 'AB'},
-  {risk: 3, name: 'Hesol', no_account: 1103, episode_type: 'AT', last_visit: new Date('December 25, 1895'), last_precedure: 'ABC',
+  {risk: 3, name: 'Mike buxton', no_account: 1103, episode_type: 'AT', last_visit: new Date('December 25, 1895'), last_precedure: 'ABC',
       last_location: 'Par', last_status: 'Bad', ccd_status: 'ABC'},
-  {risk: 3, name: 'Hesol', no_account: 1104, episode_type: 'AT', last_visit: new Date('December 25, 1895'), last_precedure: 'ABC',
+  {risk: 1, name: 'Hesol', no_account: 1104, episode_type: 'AT', last_visit: new Date('December 25, 1895'), last_precedure: 'ABC',
       last_location: 'Par', last_status: 'Bad', ccd_status: 'ABC'},
-  {risk: 3, name: 'Hesol', no_account: 1104, episode_type: 'AT', last_visit: new Date('December 25, 1895'), last_precedure: 'ABC',
+  {risk: 2, name: 'Hesol', no_account: 1104, episode_type: 'AT', last_visit: new Date('December 25, 1895'), last_precedure: 'ABC',
       last_location: 'Par', last_status: 'Bad', ccd_status: 'ABC'},
 ];

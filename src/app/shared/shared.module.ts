@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { MaterialModule } from './material/material.module';
+import { ComponentsModule } from './components/components.module';
 
 @NgModule({
   imports: [
@@ -11,14 +12,14 @@ import { MaterialModule } from './material/material.module';
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-
+    ComponentsModule,
     MaterialModule
   ],
   exports: [
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-
+    ComponentsModule,
     MaterialModule
   ],
   declarations: []
