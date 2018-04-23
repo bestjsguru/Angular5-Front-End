@@ -248,10 +248,6 @@
               color: #69A9CC;
             }
           }
-
-          .close-button {
-            display: none;
-          }
         }
       }
 
@@ -282,15 +278,31 @@
       }
 
       .demographics {
+
+        .close-button {
+          display: none;
+        }
       }
 
       .phyiscal-theory {
+
+        .close-button {
+          display: none;
+        }
       }
 
       .occupational-theory {
+
+        .close-button {
+          display: none;
+        }
       }
 
       .service-provider {
+
+        .close-button {
+          display: none ;
+        }
       }
     }
   }

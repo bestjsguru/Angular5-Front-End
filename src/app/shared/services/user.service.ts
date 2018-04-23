@@ -27,8 +27,8 @@ export class UserService {
   }
 
   login(email: string, password: string) {
-    const body = {username: email, password: password};    
-    return this.http.post(this._environment.apiUrl + '/login/auth', body).map(res => {
+    const body = {username: email, password: password};
+    return this.http.post(environment.apiUrl + '/login/auth', body).map(res => {
       console.log('res: ', res);
     });
   }

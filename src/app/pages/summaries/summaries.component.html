@@ -1,7 +1,7 @@
 <div class="summaries">
   <div class="header">
     <div class="search-bar">
-      <input class="search-box" type="text" placeholder="Search this episode list">
+      <input class="search-box" type="text" placeholder="Search this episode list" (change)="search()">
       <div class="episode-list">
         <div>List:</div>
         <select class="episode">
@@ -17,7 +17,7 @@
           </mat-select>
         </mat-form-field> -->
       </div>
-      <div class="add-btn">
+      <div class="add-btn" (click)="clickAddNewEpisodeButton()">
         <i class="fa fa-plus-circle"></i>
         <div>New Episode</div>
       </div>

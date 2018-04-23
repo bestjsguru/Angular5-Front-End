@@ -5,11 +5,11 @@
       <label>GO BACK</label>
     </button>
     <div class="title"> Patient Details</div>
-    <button class="add-btn">
+    <button class="add-btn" (click)="clickAddEpisodeButton()">
       <i class="fa fa-plus-circle"></i>
       <div>New Episode</div>
     </button>
-    <button class="edit-btn">
+    <button class="edit-btn" (click)="clickEditDetailButton()">
       <i class="fa fa-pencil"></i>
       <label>Edit Details</label>
     </button>
@@ -87,14 +87,14 @@
         <div class="row-button">
             <i class="fa fa-bars"></i>
             <div class="title">Admittance Infomation</div>
-            <div class="open-button">
+            <div class="open-button" (click)="clickAdmittanceButton()" *ngIf="!flagAdmittance">
               <i class="fa fa-angle-down"></i>
             </div>
-            <div class="close-button">
+            <div class="close-button" (click)="clickAdmittanceButton()" *ngIf="flagAdmittance">
               <i class="fa fa-angle-up"></i>
             </div>
         </div>
-        <div class="sub-detail">
+        <div class="sub-detail" *ngIf="flagAdmittance">
           <div class="seperator"></div>
           <div class="row column">
             <div>

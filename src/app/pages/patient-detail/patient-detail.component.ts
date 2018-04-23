@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-patient-detail',
@@ -7,10 +6,23 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./patient-detail.component.scss']
 })
 export class PatientDetailComponent implements OnInit {
-
+  flagAdmittance = true;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  clickAdmittanceButton() {
+    this.flagAdmittance = !this.flagAdmittance;
+    console.log(this.flagAdmittance);
+  }
+
+  clickAddEpisodeButton() {
+    alert('Clicked the Add Episode Button');
+  }
+
+  clickEditDetailButton() {
+    alert('Clicked the Add Episode Button');
   }
 
 }

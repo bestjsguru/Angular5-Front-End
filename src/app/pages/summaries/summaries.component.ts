@@ -8,10 +8,8 @@ import { MatTableDataSource, MatSort } from '@angular/material';
 })
 export class SummariesComponent implements OnInit, AfterViewInit {
 
-//  displayedColumns = ['position', 'name', 'weight', 'symbol'];
   displayedColumns = ['risk', 'name', 'no_account', 'episode_type',
                       'last_visit', 'last_precedure', 'last_location', 'last_status', 'ccd_status'];
-
   dataSource = new MatTableDataSource(ELEMENT_DATA);
   @ViewChild(MatSort) sort: MatSort;
 
@@ -31,6 +29,23 @@ export class SummariesComponent implements OnInit, AfterViewInit {
 
   rowClicked(row: Element) {
     console.log(row);
+  }
+
+  clickAddNewEpisodeButton() {
+    alert('Clicked the New Episode Button');
+  }
+
+  search() {
+    const filterResutls = [];
+    ELEMENT_DATA.forEach((element) => {
+      console.log(element);
+      console.log();
+      const isExist = Object.values(element).find((value) => value.toString().includes('so'));
+      if (isExist) {
+        filterResutls.push(element);
+      }
+    });
+    console.log('filtered results: ', filterResutls);
   }
 }
 
