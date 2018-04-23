@@ -1,6 +1,6 @@
 <div class="details">
   <div class="header">
-    <button class="back-button"> 
+    <button class="back-button" routerLink = "/summaries"> 
       <i class="fa fa-angle-left"></i>
       <label>GO BACK</label>
     </button>
@@ -51,7 +51,9 @@
       <div class="other-info">
         <div class="top-section">
           <div class="list-box">
-
+              <select class="selectpicker">
+                <option>Primary Physician</option>
+              </select>
           </div>
           <div class="row">
             <div>
@@ -82,54 +84,108 @@
     </div>
     <div class="right-side">
       <div class="right-item admittance-infomation">
-        <i class="fa fa-bars"></i>
-        <div class="title">Admittance Infomation</div>
-        <div class="open-button">
-          <i class="fa fa-angle-down"></i>
+        <div class="row-button">
+            <i class="fa fa-bars"></i>
+            <div class="title">Admittance Infomation</div>
+            <div class="open-button">
+              <i class="fa fa-angle-down"></i>
+            </div>
+            <div class="close-button">
+              <i class="fa fa-angle-up"></i>
+            </div>
         </div>
-        <div class="right-item close-button">
-          <i class="fa fa-angle-up"></i>
+        <div class="sub-detail">
+          <div class="seperator"></div>
+          <div class="row column">
+            <div>
+              <div class="row">
+                <label class="field">ADMITTED DATE</label>
+                <label class="admitted-date value">4/12/2018</label>
+              </div>
+              <div class="row">
+                <label class="field">READMITTED DATE</label>
+                <label class="readmitted-date value">24/12/2018</label>
+              </div>
+              <div class="row">
+                <label class="field">DISCHARGED DATE</label>
+                <label class="discharged-date value">5/12/2018</label>
+              </div>
+              <div class="row">
+                <label class="field">DISCHARGE STATUS</label>
+                <label class="discharged-status value">Discharged</label>
+              </div>
+              <div class="row">
+                <label class="field">DISCHARGED TO</label>
+                <label class="discharged-status value">Chicago Lakeshore</label>
+              </div>
+            </div>
+            <span class="column-seperator">
+            </span>
+            <div>
+              <div class="row">
+                <label class="field"> WEIGHT ON ADMISSION</label>
+                <label class="weight value"> 195.7 pounds </label>
+              </div>
+              <div class="row">
+                <label class="field"> HEIGHT ON ADMISSION</label>
+                <label class="height value"> 69.2 inch </label>
+              </div>
+              <div class="row">
+                <label class="field"> ROOM NUMBER </label>
+                <label class="room-no value"> 202B </label>
+              </div>
+    
+            </div>
+          </div>
         </div>
       </div>
       <div class="right-item demographics">
-          <i class="fa fa-bars"></i>
-          <div class="title">Demographics</div>
-          <div class="open-button">
-            <i class="fa fa-angle-down"></i>
-          </div>
-          <div class="right-item close-button">
-            <i class="fa fa-angle-up"></i>
-          </div>
+        <div class="row-button">
+            <i class="fa fa-bars"></i>
+            <div class="title">Demographics</div>
+            <div class="open-button">
+              <i class="fa fa-angle-down"></i>
+            </div>
+            <div class="close-button">
+              <i class="fa fa-angle-up"></i>
+            </div>
+        </div>
       </div>
       <div class="right-item phyiscal-theory">
-          <i class="fa fa-bars"></i>
-          <div class="title">Physical Theory</div>
-          <div class="open-button">
-            <i class="fa fa-angle-down"></i>
-          </div>
-          <div class="right-item close-button">
-            <i class="fa fa-angle-up"></i>
-          </div>
+        <div class="row-button">
+            <i class="fa fa-bars"></i>
+            <div class="title">Physical Theory</div>
+            <div class="open-button">
+              <i class="fa fa-angle-down"></i>
+            </div>
+            <div class="close-button">
+              <i class="fa fa-angle-up"></i>
+            </div>
+        </div>
       </div>
       <div class="right-item occupational-theory">
-          <i class="fa fa-bars"></i>
-          <div class="title">Occupational Theory</div>
-          <div class="open-button">
-            <i class="fa fa-angle-down"></i>
-          </div>
-          <div class="right-item close-button">
-            <i class="fa fa-angle-up"></i>
-          </div>
+        <div class="row-button">
+            <i class="fa fa-bars"></i>
+            <div class="title">Occupational Theory</div>
+            <div class="open-button">
+              <i class="fa fa-angle-down"></i>
+            </div>
+            <div class="close-button">
+              <i class="fa fa-angle-up"></i>
+            </div>
+        </div>
       </div>
       <div class="right-item service-provider">
-          <i class="fa fa-bars"></i>
-          <div class="title">Service Provider</div>
-          <div class="open-button">
-            <i class="fa fa-angle-down"></i>
-          </div>
-          <div class="right-item close-button">
-            <i class="fa fa-angle-up"></i>
-          </div>
+        <div class="row-button">
+            <i class="fa fa-bars"></i>
+            <div class="title">Service Provider</div>
+            <div class="open-button">
+              <i class="fa fa-angle-down"></i>
+            </div>
+            <div class="close-button">
+              <i class="fa fa-angle-up"></i>
+            </div>
+        </div>
       </div>
     </div>
   </div>

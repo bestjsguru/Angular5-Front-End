@@ -73,7 +73,7 @@
       </ng-container>
 
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-      <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="rowClicked(row)"></mat-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="rowClicked(row)" routerLink="/patient-detail/3"></mat-row>
     </mat-table>
   </div>
 </div>

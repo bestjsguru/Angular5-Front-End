@@ -4,6 +4,31 @@
   font-weight: 600;
   text-align: center;
 
+  .row {
+    margin: 0 0 20px 0;
+
+    label {
+      margin-bottom: 0;
+      
+      &.field {
+        color: #A8A8AF;
+        flex: 1;
+        text-align: left;
+        letter-spacing: 0.5px;
+        line-height: 20px;
+        font-weight: 500;
+      }
+
+      &.value {
+        color: #141928;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        line-height: 20px;
+        font-weight: 600;
+      }
+    }
+  }
+
   .header {
     display: flex;
     width: 1680px;
@@ -139,30 +164,6 @@
         .info {
           padding-top: 40px;
 
-          .row {
-            margin: 0 0 20px 0;
-
-            label {
-              margin-bottom: 0;
-              
-              &.field {
-                color: #A8A8AF;
-                flex: 1;
-                text-align: left;
-                letter-spacing: 0.5px;
-                line-height: 20px;
-                font-weight: 500;
-              }
-
-              &.value {
-                color: #141928;
-                font-size: 14px;
-                letter-spacing: 0.5px;
-                line-height: 20px;
-                font-weight: 600;
-              }
-            }
-          }
         }
       }
 
@@ -174,6 +175,21 @@
         
         .top-section {
           padding-top: 30px;
+
+          .list-box {
+
+            .selectpicker {
+
+              height: 44px;	
+              width: 370px;	
+              border: 1px solid #F0F0F1;	
+              border-radius: 2px;	
+              background-color: #FFFFFF;
+              margin-bottom: 30px;
+              padding: 12px 0;
+              padding-left: 18px;
+            }
+          }
         }
       }
     }
@@ -183,59 +199,86 @@
       margin-left: 30px;
 
       .right-item {
-        background-color: white;
-        height: 110px;
-        padding: 0 50px;
-        margin-bottom: 15px;
-        display: flex;
-        border-radius: 2px;
+        margin-bottom:15px;
 
-        .fa-bars {
-          width: 20px;
-          height: 14px;
-          letter-spacing: 5px;
-          font-size: 20px;
-          color: #f0f0f1;
-          margin-right: 30px;
-          margin-top: 45px;
-        }
-
-        .title {
-          margin-top: 40px;
-          font-size: 24px;
-          line-height: 30px;
-          color: #141928;
-          flex: 1;
-          text-align: left;
-        }
-
-        .fa {
-          margin-top: 40px;
-          font-size: 20px;
-          padding-top: 5px;
-          width: 30px;
-          height: 30px;
+        .row-button {
+          display: flex;
+          background-color: white;
+          height: 110px;
+          padding: 0 50px;
           border-radius: 2px;
+          font-family: 'proxima_novaregular';
+          font-weight: 600;
 
-          &-angle-down {
-            background-color: #69A9CC;
-            color: white;
+          .fa-bars {
+            width: 20px;
+            height: 14px;
+            letter-spacing: 5px;
+            font-size: 20px;
+            color: #f0f0f1;
+            margin-right: 30px;
+            margin-top: 45px;
           }
 
-          &-angle-up {
-            background-color: #F5F6FA;
-            color: #69A9CC;
+          .title {
+            margin-top: 40px;
+            font-size: 24px;
+            letter-spacing: normal;
+            line-height: 30px;
+            color: #141928;
+            flex: 1;
+            text-align: left;
+          }
+
+          .fa {
+            margin-top: 40px;
+            font-size: 20px;
+            padding-top: 5px;
+            width: 30px;
+            height: 30px;
+            border-radius: 2px;
+
+            &-angle-down {
+              background-color: #69A9CC;
+              color: white;
+            }
+
+            &-angle-up {
+              background-color: #F5F6FA;
+              color: #69A9CC;
+            }
+          }
+
+          .close-button {
+            display: none;
           }
         }
-
-        .close-button {
-          display: none;
-        }
-
-        
       }
 
       .admittance-infomation {
+
+        .sub-detail {
+          height: 300px;
+          width: 1070px;
+          padding: 0 50px;
+          background-color: white;
+
+          .seperator {
+            height: 20px;
+            border-bottom: 1px solid #f5f6fa;
+          }
+
+          .row.column {
+            margin-top: 40px;
+            >div {
+              flex: 1;
+            }
+            span {
+              width: 70px;
+              height: 100vw;
+            }
+          }
+        }        
       }
 
       .demographics {
