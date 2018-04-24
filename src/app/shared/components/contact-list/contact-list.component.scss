@@ -1,3 +1,74 @@
-.header {
-  
+  .contact-list {
+    width: 300px;
+    display: inline-block;
+
+    .header {
+      display: flex;
+      align-items: center;
+      height: 36px;	
+      width: 300px;	
+      border: 1px solid rgba(58,121,156,0);
+      background-color: #1067F4;  
+      font-family: proxima_novaregular;
+      border-radius: 2px 2px 0 0;
+
+      .add-button {
+        padding-left: 151px;
+        padding: 0 28.47px 0 151px;
+
+        img {
+          width: 17px;
+        }
+      }
+
+      .mini-button {
+        padding: 17px 0px;
+
+        div {
+          height: 2px;	
+          width: 16px;	
+          border-radius: 1.5px;	
+          background-color: white;
+        }
+      }
+
+      .title {
+        color: white;
+        font-size: 14px;
+        margin-left: 14px;
+      }
+
+    }
+
+    .main-container {
+      height: 300px;
+      
+      .contact-item {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #F0F0F1;
+        margin-left: 15px;
+        .photo {
+          img {
+            width: 50px;
+          }
+        }
+
+        .name {
+          font-size: 14px;
+          font-family: proxima_novaregular;
+        }
+
+        .dot {
+          margin-left: auto;
+          margin-right: 22px;
+
+          div {
+            padding: 4px;
+            background-color: red;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
 }

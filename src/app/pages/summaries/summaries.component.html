@@ -73,10 +73,11 @@
       </ng-container>
 
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-      <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="rowClicked(row)" routerLink="/patient-detail/3"></mat-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="rowClicked(row)" routerLink="/patient-detail/{{row.no_account}}"></mat-row>
+
     </mat-table>
   </div>
 </div>
 
-<app-chat></app-chat>
-<app-contact-list></app-contact-list>
+<!-- <app-chat></app-chat>
+<app-contact-list></app-contact-list> -->
