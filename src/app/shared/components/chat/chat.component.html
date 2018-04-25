@@ -1,7 +1,3 @@
-<p>
-  chat works!
-</p>
-
 <div class="chat-box">
   <div class="title-bar" (click)="openChat()">
     <div class="user-name">Susan Cannon</div>
@@ -11,31 +7,20 @@
   </div>
   <div class="main-container" #chatcontainer>
     <div class="history-area">
-      asdlkfjalsd;kfjal;sdaasdfasdfasdfasdfasdf
-      sadf;lasjdfl;asdjfladsasdfasdfasdfdsafsadf
-      asdfj;lasdjfl;asdfjasdfjlsadfjlkasdjflas;dfj;lsadfsal;dkfjl
-      asdlkfjalsd;kfjal;sdaasdfasdfasdfasdfasdf
-      sadf;lasjdfl;asdjfladsasdfasdfasdfdsafsadf
-      asdfj;lasdjfl;asdfjasdfjlsadfjlkasdjflas;dfj;lsadfsal;dkfjl
-      asdlkfjalsd;kfjal;sdaasdfasdfasdfasdfasdf
-      sadf;lasjdfl;asdjfladsasdfasdfasdfdsafsadf
-      asdfj;lasdjfl;asdfjasdfjlsadfjlkasdjflas;dfj;lsadfsal;dkfjl
-      asdlkfjalsd;kfjal;sdaasdfasdfasdfasdfasdf
-      sadf;lasjdfl;asdjfladsasdfasdfasdfdsafsadf
-      asdfj;lasdjfl;asdfjasdfjlsadfjlkasdjflas;dfj;lsadfsal;dkfjl
-      asdlkfjalsd;kfjal;sdaasdfasdfasdfasdfasdf
-      sadf;lasjdfl;asdjfladsasdfasdfasdfdsafsadf
-      asdfj;lasdjfl;asdfjasdfjlsadfjlkasdjflas;dfj;lsadfsal;dkfjl
-      asdlkfjalsd;kfjal;sdaasdfasdfasdfasdfasdf
-      sadf;lasjdfl;asdjfladsasdfasdfasdfdsafsadf
-      asdfj;lasdjfl;asdfjasdfjlsadfjlkasdjflas;dfj;lsadfsal;dkfjl
-      asdlkfjalsd;kfjal;sdaasdfasdfasdfasdfasdf
-      sadf;lasjdfl;asdjfladsasdfasdfasdfdsafsadf
-      asdfj;lasdjfl;asdfjasdfjlsadfjlkasdjflas;dfj;lsadfsal;dkfjl
-
+      <div *ngFor="let chat of chatdata">
+        <div *ngIf="chat.man" class="row">
+          <div class="photo">
+            <img src="../../../../../assets/images/avatar-dash-header.png">
+          </div>
+          <div class="chat man">{{ chat.man }}</div>
+        </div>
+        <div *ngIf="chat.you" class="chat you">
+            {{ chat.you }}
+        </div>
+      </div>
     </div>
     <div class="input-area">
-      <textarea resize="false" placeholder="Enter your message"></textarea>
+      <textarea resize="false" placeholder="Enter your message" (keydown.enter)="enterChat(item.value)" #item></textarea>
     </div>
   </div>
 </div>

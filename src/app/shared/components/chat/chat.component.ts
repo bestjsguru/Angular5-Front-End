@@ -1,17 +1,23 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input, OnChanges, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-chat',
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.scss']
 })
-export class ChatComponent implements OnInit {
+export class ChatComponent implements OnInit, OnChanges {
+  @Input() chatdata;
   @ViewChild('chatcontainer') chatContanier;
+  @Output() chatData = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
+
   }
 
+  ngOnChanges() {
+    console.log('chatdata', this.chatdata);
+  }
   closeChat(event: Event) {
     event.stopPropagation();
     this.chatContanier.nativeElement.style.display = 'none';
@@ -20,5 +26,11 @@ export class ChatComponent implements OnInit {
   openChat() {
     this.chatContanier.nativeElement.style.display = 'block';
   }
-
+  enterChat(evt: any) {
+    console.log('evt', evt);
+    this.chatData.emit({
+      id: 1,
+      chat: evt
+    });
+  }
 }

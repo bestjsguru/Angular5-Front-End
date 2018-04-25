@@ -9,13 +9,6 @@
           <option value="item">Episode List Name1</option>
           <option value="item">Episode List Name2</option>
         </select>
-        <!-- <mat-form-field>
-          <mat-select placeholder="Favorite food">
-            <mat-option *ngFor="let food of foods" [value]="food.value">
-              {{ food.viewValue }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field> -->
       </div>
       <div class="add-btn" (click)="clickAddNewEpisodeButton()">
         <i class="fa fa-plus-circle"></i>
@@ -79,5 +72,6 @@
   </div>
 </div>
 
-<!-- <app-chat></app-chat>
-<app-contact-list></app-contact-list> -->
+<div class="chats">
+  <app-contact-list style="width: 100vw;"></app-contact-list>
+</div>

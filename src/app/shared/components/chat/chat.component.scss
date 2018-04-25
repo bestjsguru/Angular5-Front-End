@@ -10,6 +10,7 @@
   padding-top: 10px;
   padding-left: 14px;
   display: flex;
+  margin-right: 15px;
 
   .user-name {
     flex: 1;
@@ -19,6 +20,7 @@
     padding-right: 12px;
   }
 }
+
 .main-container {
   height: 291.93px;	
   width: 260px;	
@@ -29,7 +31,38 @@
     overflow-y: auto;
     word-wrap: break-word;
     height: 255px;
-    padding: 0 16px;
+    padding: 8px 10px;
+
+    .chat {
+      width: fit-content;
+      border-radius: 10px;
+      padding: 7px 10px;
+      margin-bottom: 5px;
+      font-size: 12px;
+      font-weight: 500;
+
+      &.you {
+        max-width: 170px;
+        margin-left: auto;
+        color: white;
+        background-color: #3A82FF;
+      }
+
+      &.man {
+        max-width: 150px;
+        margin-right: auto;
+        color: black;
+        background-color: #E7EAEE;
+      }
+    }
+
+    .photo > img {
+      width: 37px;
+    }
+
+    .row {
+      margin: 0;
+    }
   }
 
   .input-area {
