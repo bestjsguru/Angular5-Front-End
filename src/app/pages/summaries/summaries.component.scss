@@ -30,6 +30,10 @@
         &::placeholder {
           color: rgba(20,25,40,0.1);
         }
+
+        &:focus {
+          outLine: none;
+        }
       }
 
       .episode-list {
@@ -152,6 +156,7 @@
   }
 
   .mat-table {
+    padding-bottom: 20px;
 
     .mat-row {
       background-color: white;

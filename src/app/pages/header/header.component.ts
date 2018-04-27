@@ -13,6 +13,6 @@ export class HeaderComponent implements OnInit {
   }
 
   clickedBackButton() {
-    localStorage.removeItem('svh_auth_token');
+    
   }
 }

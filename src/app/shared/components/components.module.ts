@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 import { ChatComponent } from './chat/chat.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { InvitationModalComponent } from './invitation-modal/invitation-modal.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    ModalModule.forRoot(),
   ],
   declarations: [
     ChatComponent,
@@ -18,6 +20,6 @@ import { InvitationModalComponent } from './invitation-modal/invitation-modal.co
     ContactListComponent,
     InvitationModalComponent
   ],
-  entryComponents: [InvitationModalComponent]
+  entryComponents: []
 })
 export class ComponentsModule { }
