@@ -4,14 +4,14 @@
       <input class="search-box" type="text" placeholder="Search this episode list" (change)="search()">
       <div class="episode-list">
         <div>List:</div>
-        <select class="episode">
+        <select class="episode form-control">
           <option value="item">Episode List Name</option>
           <option value="item">Episode List Name1</option>
           <option value="item">Episode List Name2</option>
         </select>
       </div>
       <div class="add-btn" (click)="clickAddNewEpisodeButton()">
-        <i class="fa fa-plus-circle"></i>
+        <span></span>
         <div>New Episode</div>
       </div>
     </div>
@@ -73,5 +73,5 @@
 </div>
 
 <div class="chats">
-  <app-contact-list style="width: 100vw;"></app-contact-list>
+  <app-contact-list></app-contact-list>
 </div>

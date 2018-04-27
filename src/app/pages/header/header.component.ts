@@ -12,4 +12,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  clickedBackButton() {
+    localStorage.removeItem('svh_auth_token');
+  }
 }

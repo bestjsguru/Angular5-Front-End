@@ -1,5 +1,7 @@
 <div class="dash-header">
   <div class="main-container">
+    <a class="back-button" (click)="clickedBackButton()" routerLink="/user/login">
+    </a>
     <div class="logo">
       <img src="../../assets/images/logo.png">
     </div>
@@ -20,7 +22,7 @@
           <img src="../../assets/images/avatar-dash-header.png">
       </div>
       <div class="users">
-        <select class="settings">
+        <select class="settings selectpicker">
           <option value="user1">Kat Kuz</option>
           <option value="user2">Sam</option>
           <option value="user3">Mercedes</option>

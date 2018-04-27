@@ -85,13 +85,33 @@
       color: white;
       margin-left: 10px;
 
-      i {
-        color: #3A799C;
-        background-color: white;
-        font-size: 26px;
-        border-radius: 26px;
-        line-height: 22px;
+      span{
+        height: 26px;	
+        width: 26px;	
+        border-radius: 18px;	
+        background-color: #3A799C;
         margin-right: auto;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 12px;
+          left: 7px;
+          height: 2px;
+          width: 12px;
+          background-color: white;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 7px;
+          left: 12px;
+          height: 12px;
+          width: 2px;
+          background-color: white;
+        }
       }
     }
 

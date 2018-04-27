@@ -11,12 +11,9 @@ import { ChatComponent } from '../chat/chat.component';
 export class ContactListComponent implements OnInit {
   number = 3;
   isOpened = [true, false, true];
-  chatText = [ [{man: 'Hi'}],
-               [{you: 'Hello, I wnat to talk about the sports-football.'},
+  chatText = [ [{you: 'Hello, I wnat to talk about the sports-football.'},
                 {you: 'This is ChatBot'},
-                {man: 'You?'}],
-               [{man: 'Hi, there'},
-                {you: 'Hello, Nice to meet you'}]
+                {man: 'You?'}]
               ];
   cntChatform = 4;
 
@@ -29,10 +26,10 @@ export class ContactListComponent implements OnInit {
   openModal(evt: any) {
     console.log('evet', evt);
 
-    const dialogRef = this.dialog.open(InvitationModalComponent, {
-      width: '650px',
-      data: {}
-    });
+    // const dialogRef = this.dialog.open(InvitationModalComponent, {
+    //   width: '650px',
+    //   data: {}
+    // });
   }
 
   clickContactItem() {

@@ -7,8 +7,9 @@ import { Component, OnInit, ViewChild, Input, OnChanges, Output, EventEmitter } 
 })
 export class ChatComponent implements OnInit, OnChanges {
   @Input() chatdata;
-  @ViewChild('chatcontainer') chatContanier;
+  @ViewChild('chatcontainer') chatContainer;
   @Output() chatData = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
@@ -18,14 +19,16 @@ export class ChatComponent implements OnInit, OnChanges {
   ngOnChanges() {
     console.log('chatdata', this.chatdata);
   }
+
   closeChat(event: Event) {
     event.stopPropagation();
-    this.chatContanier.nativeElement.style.display = 'none';
+    this.chatContainer.nativeElement.style.display = 'none';
   }
 
   openChat() {
-    this.chatContanier.nativeElement.style.display = 'block';
+    this.chatContainer.nativeElement.style.display = 'block';
   }
+
   enterChat(evt: any) {
     console.log('evt', evt);
     this.chatData.emit({
