@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { InvitationModalComponent } from '../invitation-modal/invitation-modal.component';
 import { ChatComponent } from '../chat/chat.component';
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 
 @Component({
   selector: 'app-contact-list',
@@ -17,19 +19,30 @@ export class ContactListComponent implements OnInit {
               ];
   cntChatform = 4;
 
-  constructor(public dialog: MatDialog) { }
+  infosInvitation = [
+    {
+      email: '',
+      userName: ''
+    },
+    {
+      email: '',
+      userName: ''
+    },
+    {
+      email: '',
+      userName: ''
+    }
+  ];
 
-  ngOnInit() {
-    console.log('isOPende', this.isOpened);
+  modalRef: BsModalRef;
+  constructor(private modalService: BsModalService) {}
+
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template);
   }
 
-  openModal(evt: any) {
-    console.log('evet', evt);
+  ngOnInit() {
 
-    // const dialogRef = this.dialog.open(InvitationModalComponent, {
-    //   width: '650px',
-    //   data: {}
-    // });
   }
 
   clickContactItem() {
@@ -39,4 +52,12 @@ export class ContactListComponent implements OnInit {
     console.log('getChat', evt);
   }
 
+  clickAddInfoInvitation() {
+    const newInfoInvitation = {
+      email: '',
+      userName: ''
+    };
+
+    this.infosInvitation.push(newInfoInvitation);
+  }
 }

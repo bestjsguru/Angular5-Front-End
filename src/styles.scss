@@ -404,3 +404,121 @@ mat-table {
   }
 }
 
+.modal-dialog {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -333px;
+  transform: translateY(-50%) !important;
+  
+  .modal-content {
+    width: 667px;	
+    border-radius: 2px;	
+    background-color: #FFFFFF;
+    padding: 40px 70px 70px 60px;
+    color: #141928;
+      
+    h4 {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 40px;
+    }
+
+    .email, .name {
+      width: 50%;
+    }
+
+    .caption {
+      font-size: 16px;
+      color: #141928;
+      margin-bottom: 3px;
+    }
+
+    .row {
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-bottom: 14px;
+    }
+
+    .border {
+      display: flex;
+      align-items: center;
+      height: 46px;	
+      width: 256px;	
+      border: 1px solid #CFCFD0;	
+      border-radius: 2px;	
+      background-color: #FFFFFF;	
+      box-shadow: inset 0 0 14px 0 rgba(245,245,245,0.43);
+
+      input {
+        border: none;
+
+        &::placeholder {
+          color: #CFCFD0;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      img {
+        box-sizing: border-box;	
+        height: 12.92px;	
+        width: 16.88px;	
+        margin-left: 16px;
+        margin-right: 10px;
+
+        &.name {
+          height: 18px;
+        }
+      }
+    }
+
+    .buttons {
+      margin-bottom: 0px;
+      
+      .add-btn {
+        margin-top: 3px;
+        flex: 1;
+    
+        .plus-icon {
+          
+          img {
+            width: 19px;
+            margin-right: 14px;
+          }
+        }
+    
+        label {
+          font-size: 16px;
+          line-height: 19px;
+          color: #69A9CC;
+        }
+      }
+    
+      .send-invitation {
+        border-radius: 2px;
+        padding: 9px 25px 9px 14px;
+        color: white;
+        text-transform: uppercase;
+        background-color: #69A9CC;
+        margin-right: 14px;
+        margin-top: 16px;
+        margin-bottom: 0px;
+    
+        img {
+          width: 26px;
+          height: 26px;
+        }
+    
+        label {
+          margin-left: 23px;
+          margin-bottom: 0;
+          margin-top: 4px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

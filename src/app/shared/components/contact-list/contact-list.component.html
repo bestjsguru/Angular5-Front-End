@@ -2,13 +2,14 @@
   <div class="contact-list">
     <div class="header">
       <div class="title">Message</div>
-      <div class="add-button" (click)="openModal($event)">
+      <div class="add-button" (click)="openModal(template)" >
         <img src="../../../../assets/images/addUser.png">
       </div>
       <div class="mini-button">
         <div></div>
       </div>
     </div>
+
     <div class="main-container">
       <div class="contact-item" (click)="clickContactItem()">
         <div class="photo">
@@ -51,4 +52,44 @@
       <app-chat [chatdata]="chatdata" (chatData)="getChat($event)"></app-chat>
     </ng-container>
   </div>
+
+  <ng-template #template modal="modals">
+    <h4 class="modal-title pull-left">Invite Additional Members</h4>
+    <div class="row">
+      <div class="email caption">
+        Email Address
+      </div>
+      <div class="name caption">
+        Full Name
+      </div>
+    </div>
+    <div *ngFor="let info of infosInvitation">
+      <div class="row">
+        <div class="email">
+          <div class="email border">
+            <img class="email" src="../../../../assets/images/icon-email.png">
+            <input type="text" placeholder="name@exaple.com">
+          </div>
+        </div>
+        <div class="name">
+          <div class="name border">
+            <img class="name" src="../../../../assets/images/icon-user.png">
+            <input type="text" placeholder="John Doe">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row buttons">
+      <div class="add-btn row" (click)="clickAddInfoInvitation()">
+        <div class="plus-icon">
+          <img src="../../../../assets/images/icon-add-button.png">
+        </div>
+        <label>Add another</label>
+      </div>
+      <div class="send-invitation row">
+        <img src="../../../../assets/images/icon-send.png">
+        <label>Send invitation</label>
+      </div>
+    </div>
+ </ng-template>
 </div>
